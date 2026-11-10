@@ -10,12 +10,12 @@ def format_amount(amount):
 
 def validate_amount(amount):
     """True, если сумма допустима для операции."""
-    return amount > 0 and amount < MAX_AMOUNT
+    return amount > 0 and amount <= MAX_AMOUNT
 
 
 def calculate_fee(amount):
     """Комиссия 1,5% от суммы, округлённая до копеек, но не меньше 10.00."""
-    fee = round(amount * FEE_PERCENT)
+    fee = round(amount * FEE_PERCENT, 2)
     if fee < MIN_FEE:
         fee = MIN_FEE
     return fee

@@ -23,3 +23,12 @@ def test_validate_amount_100000_is_allowed():
     result = validate_amount(amount)
     # Assert
     assert result is True
+
+
+def test_calculate_fee_700_is_10_50():
+    # Arrange
+    amount = 700
+    # Act
+    result = calculate_fee(amount)
+    # Assert
+    assert result == 10.50
