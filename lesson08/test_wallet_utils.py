@@ -14,3 +14,12 @@ def test_format_amount_1000_has_two_decimals():
 # Задание 4.2: сначала готовый тест из задания, под ним — ваш на calculate_fee.
 # Задание 4.4: ещё один ваш тест — против выжившего мутанта.
 # Ожидаемые значения берутся из таблицы в SPEC.md и больше ниоткуда.
+
+
+def test_validate_amount_100000_is_allowed():
+    # Arrange
+    amount = 100000
+    # Act
+    result = validate_amount(amount)
+    # Assert
+    assert result is True
